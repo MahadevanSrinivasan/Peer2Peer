@@ -1,5 +1,6 @@
 #define RCVBUFSIZE 1024 /* Size of receive buffer */
 
+#pragma once
 struct RegisterMsg
 {
 	char filename[32];
@@ -8,6 +9,7 @@ struct RegisterMsg
 	int portnum;
 };
 
+#pragma once
 struct FileListReply
 {
 	char filename[32];
