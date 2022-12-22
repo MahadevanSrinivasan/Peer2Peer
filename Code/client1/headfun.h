@@ -1,3 +1,11 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include "head_vars.h"
+
 #define MAXPENDING 5/* Maximum outstanding connection requests */
 #define MAXCLIENTS 5
 
@@ -28,7 +36,7 @@ void FileSend(FILE *fp, int sock, int packet_no)
 {
 	struct FileSendFormat packet;
 	int packet_count1,last_packet,buf_len,len_file=0,i=1;
-	char *echoString;	/* String to send to echo server */
+//	char *echoString;	/* String to send to echo server */
 
 	rewind(fp);
 	len_file = ComputeFileSize(fp);
